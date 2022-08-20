@@ -47,7 +47,6 @@ public class ProjectDaoService {
                 "SELECT id, name, description, date FROM project WHERE name LIKE ?"
         );
 
-        );
     }
 
 
@@ -125,15 +124,7 @@ public class ProjectDaoService {
 
         updateSt.executeUpdate();
     }
-/*  public void update(Human human) throws SQLException {
-        updateSt.setString(1, human.getName());
-        updateSt.setString(2, human.getBirthday().toString());
-        updateSt.setString(3, human.getGender().name());
-        updateSt.setLong(4, human.getId());
 
-        updateSt.executeUpdate();
-    }
-*/
     public void deleteById(long id) throws SQLException {
         deleteByIdSt.setLong(1, id);
         deleteByIdSt.executeUpdate();
@@ -182,4 +173,5 @@ public class ProjectDaoService {
         }
 
     }
+//
 }

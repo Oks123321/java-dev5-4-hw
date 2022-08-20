@@ -1,5 +1,8 @@
 package com.goit.javacore5.feature.skill;
 
+import lombok.Data;
+
+@Data
 public class Skill {
     private long id;
     private Branch branch;
@@ -7,7 +10,7 @@ public class Skill {
 
     public enum Branch {
         java,
-        c,
+        python,
         javaScript
     }
 

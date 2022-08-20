@@ -3,11 +3,22 @@
  */
 package com.goit.javacore5.feature;
 
+import com.goit.javacore5.feature.developer.Developer;
+import com.goit.javacore5.feature.developer.DeveloperDaoService;
 import com.goit.javacore5.feature.developer.DeveloperService;
+import com.goit.javacore5.feature.developer_skill.DevSkillService;
+import com.goit.javacore5.feature.prefs.Prefs;
+import com.goit.javacore5.feature.project.ProjectDaoService;
+import com.goit.javacore5.feature.project.ProjectService;
+import com.goit.javacore5.feature.project_developer.ProjectDev;
+import com.goit.javacore5.feature.project_developer.ProjectDevDaoService;
+import com.goit.javacore5.feature.project_developer.ProjectDevService;
+import com.goit.javacore5.feature.skill.SkillService;
 import com.goit.javacore5.feature.storage.DatabaseInitService;
 import com.goit.javacore5.feature.storage.Storage;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
 
 public class App {
 
@@ -15,19 +26,64 @@ public class App {
     public static void main(String[] args) throws SQLException {
         Storage storage = Storage.getInstance();
 
-//        new DatabaseInitService().initDb(storage);
-
+        new DatabaseInitService().initDb(new Prefs().getString(Prefs.DB_JDBC_CONNECTION_URL));
+//
         DeveloperService developerService = new DeveloperService(storage);
+        ProjectService projectService = new ProjectService(storage);
+        ProjectDevService projectDevService = new ProjectDevService(storage);
+        SkillService skillService = new SkillService(storage);
+        DevSkillService devSkillService = new DevSkillService(storage);
+        DeveloperDaoService developerDaoService = new DeveloperDaoService(storage.getConnection());
+        ProjectDevDaoService projectDevDaoService = new ProjectDevDaoService(storage.getConnection());
+Developer developer = new Developer();
+//        System.out.println("developerService.getIds() = " + developerService.getIds());
+//        System.out.println("developerDaoService.getAll() = " + developerDaoService.getAll());
+//        System.out.println("developerDaoService.getById(1) = " + developerDaoService.getById(1));
+//        System.out.println("developerDaoService.searchByName(\"Harry\") = " + developerDaoService.searchByName("Harry"));
+        System.out.println("projectDevDaoService.getByProjectId(2) = " + projectDevDaoService.getByProjectId(2));
+        System.out.println("projectDevDaoService.getSalaryFromProject() = " + projectDevDaoService.getSalaryFromProject());
 
+//
+//        System.out.println("developerDaoService.getAll() = " + developerDaoService.getAll();
+//        System.out.println("developerService.getDeveloperInfo(1) = " + developerService.getDeveloperInfo(1));
+//
 //        developerService.createNewDevelopers(
 //                new String[]{"Harry Harryson", "Jack Sparrow", "Julia Petterson", "Mary Poppins", "Tom Soyer", "Andrew Smith"},
 //                new int[]{35, 28, 30, 40, 18, 50},
-//                new String[]{"male", "male", "female","female", "male", "male"});
+//                new String[]{"male", "male", "female", "female", "male", "male"},
+//                new int[]{1200, 1000, 1500, 1000, 1500, 1400});
+//
+//        projectService.createNewProjects(
+//                new String[]{"My house", "Our city", "Travel", "Traffic schedule", "Hot party", "Holiday"},
+//                new String[]{"application for payment of utilities", "application for communication with the city authorities",
+//                        "application about interesting travels", "schedule of urban and suburban transport", "organization of parties and banquets",
+//                        "organization of children_s holidays"},
+//                new LocalDate[]{LocalDate.of(2016, 05, 22), LocalDate.of(2018, 02, 14),
+//                        LocalDate.of(2021, 03, 06), LocalDate.of(2019, 12, 22),
+//                        LocalDate.of(2000, 10, 01), LocalDate.of(2000, 06, 18)}
+//        );
+
+//        projectDevService.createNewProjectDevs(
+//                new long[]{1, 1, 2, 2, 3, 3, 4, 5, 6},
+//                new long[]{1, 3, 5, 2, 6, 4, 6, 2, 2}
+//        );
+
+//        skillService.createNewSkills(
+//                new String[]{"Java", "Java", "Python", "Python", "Python", "JavaScript", "JavaScript", "JavaScript"},
+//                new String[]{"Middle", "Senior", "Junior", "Middle", "Senior","Junior", "Middle", "Senior" }
+//
+//        );
+//
+//
+//        devSkillService.createNewDevSkills(
+//                new long[]{1,1,2,2,3,3,4,4,5,6},
+//                new long[]{1,5,3,7,6,4,2,8,2,1}
+//        );
+
+//
+//        System.out.println(developerDaoService.getById(2));
+//        System.out.println("projectDevDaoService.getByProjectId(1) = " + projectDevDaoService.getByProjectId(1));
+
     }
 }
-/*('Harry', 'Harryson', 35, 'male'),
-('Jack', 'Sparrow', 28, 'male'),
-('Julia', 'Petterson', 30, 'female'),
-('Mary', 'Poppins', 40, 'female'),
-('Tom', 'Soyer', 18, 'male'),
-('Andrew', 'Smith', 50, 'male');*/
+

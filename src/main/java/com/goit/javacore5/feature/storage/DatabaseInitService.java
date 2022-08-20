@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 public class DatabaseInitService {
 
     public void initDb(String connectionUrl) {
-
+//String connectionUrl = new Prefs().getString(Prefs.DB_JDBC_CONNECTION_URL);
         // Create the Flyway instance and point it to the database
         Flyway flyway = Flyway
                 .configure()

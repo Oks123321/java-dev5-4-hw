@@ -1,0 +1,352 @@
+2022-08-17 17:58:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "gender" не найден
+Column "gender" not found [42122-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
+	at com.goit.javacore5.feature.developer.DeveloperService.getDeveloperInfo(DeveloperService.java:81)
+	at com.goit.javacore5.feature.App.main(App.java:33)
+2022-08-17 18:03:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "gender" не найден
+Column "gender" not found [42122-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
+	at com.goit.javacore5.feature.developer.DeveloperService.getDeveloperInfo(DeveloperService.java:81)
+	at com.goit.javacore5.feature.App.main(App.java:33)
+2022-08-17 18:03:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "gender" не найден
+Column "gender" not found [42122-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
+	at com.goit.javacore5.feature.developer.DeveloperService.getDeveloperInfo(DeveloperService.java:81)
+	at com.goit.javacore5.feature.App.main(App.java:33)
+2022-08-17 18:07:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "salary" не найден
+Column "salary" not found [42122-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at com.goit.javacore5.feature.developer.DeveloperService.getDeveloperInfo(DeveloperService.java:81)
+	at com.goit.javacore5.feature.App.main(App.java:33)
+2022-08-17 18:18:28 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/GoIt/java-dev5-4/test.mv.db [2.1.212/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/GoIt/java-dev5-4/test.mv.db [2.1.212/7]" [50000-212]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:124)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3349)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:590)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:466)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4118)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at com.goit.javacore5.feature.storage.Storage.<init>(Storage.java:17)
+	at com.goit.javacore5.feature.storage.Storage.<clinit>(Storage.java:11)
+	at com.goit.javacore5.feature.App.main(App.java:26)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/GoIt/java-dev5-4/test.mv.db [2.1.212/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/GoIt/java-dev5-4/test.mv.db [2.1.212/7]" [50000-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/GoIt/java-dev5-4/test.mv.db [2.1.212/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:163)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:449)
+	... 14 more
+2022-08-17 18:18:29 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/GoIt/java-dev5-4/test.mv.db [2.1.212/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/GoIt/java-dev5-4/test.mv.db [2.1.212/7]" [50000-212]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:124)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3349)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:590)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:466)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4118)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnectionFromDriver(DriverDataSource.java:258)
+	at org.flywaydb.core.internal.jdbc.DriverDataSource.getConnection(DriverDataSource.java:223)
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:75)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:146)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:126)
+	at com.goit.javacore5.feature.storage.DatabaseInitService.initDb(DatabaseInitService.java:21)
+	at com.goit.javacore5.feature.App.main(App.java:28)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/GoIt/java-dev5-4/test.mv.db [2.1.212/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/GoIt/java-dev5-4/test.mv.db [2.1.212/7]" [50000-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 23 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/GoIt/java-dev5-4/test.mv.db [2.1.212/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:163)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:449)
+	... 17 more
+2022-08-17 18:39:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "1" для параметра "parameterIndex"
+Invalid value "1" for parameter "parameterIndex" [90008-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1395)
+	at org.h2.jdbc.JdbcPreparedStatement.setLong(JdbcPreparedStatement.java:678)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalary(ProjectDevDaoService.java:140)
+	at com.goit.javacore5.feature.App.main(App.java:39)
+2022-08-17 18:45:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "1" для параметра "parameterIndex"
+Invalid value "1" for parameter "parameterIndex" [90008-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1395)
+	at org.h2.jdbc.JdbcPreparedStatement.setLong(JdbcPreparedStatement.java:678)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalary(ProjectDevDaoService.java:140)
+	at com.goit.javacore5.feature.App.main(App.java:39)
+2022-08-17 18:46:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "1" для параметра "parameterIndex"
+Invalid value "1" for parameter "parameterIndex" [90008-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1395)
+	at org.h2.jdbc.JdbcPreparedStatement.setLong(JdbcPreparedStatement.java:678)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalary(ProjectDevDaoService.java:140)
+	at com.goit.javacore5.feature.App.main(App.java:39)
+2022-08-17 18:48:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "1" для параметра "parameterIndex"
+Invalid value "1" for parameter "parameterIndex" [90008-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1395)
+	at org.h2.jdbc.JdbcPreparedStatement.setLong(JdbcPreparedStatement.java:678)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalary(ProjectDevDaoService.java:140)
+	at com.goit.javacore5.feature.App.main(App.java:39)
+2022-08-17 19:19:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "1" для параметра "parameterIndex"
+Invalid value "1" for parameter "parameterIndex" [90008-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1395)
+	at org.h2.jdbc.JdbcPreparedStatement.setLong(JdbcPreparedStatement.java:678)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalary(ProjectDevDaoService.java:141)
+	at com.goit.javacore5.feature.App.main(App.java:39)
+2022-08-17 19:20:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "1" для параметра "parameterIndex"
+Invalid value "1" for parameter "parameterIndex" [90008-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1395)
+	at org.h2.jdbc.JdbcPreparedStatement.setLong(JdbcPreparedStatement.java:678)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalary(ProjectDevDaoService.java:141)
+	at com.goit.javacore5.feature.App.main(App.java:39)
+2022-08-17 19:21:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "1" для параметра "parameterIndex"
+Invalid value "1" for parameter "parameterIndex" [90008-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1395)
+	at org.h2.jdbc.JdbcPreparedStatement.setLong(JdbcPreparedStatement.java:678)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalary(ProjectDevDaoService.java:141)
+	at com.goit.javacore5.feature.App.main(App.java:39)
+2022-08-17 19:22:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "1" для параметра "parameterIndex"
+Invalid value "1" for parameter "parameterIndex" [90008-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1395)
+	at org.h2.jdbc.JdbcPreparedStatement.setLong(JdbcPreparedStatement.java:678)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalary(ProjectDevDaoService.java:141)
+	at com.goit.javacore5.feature.App.main(App.java:39)
+2022-08-17 19:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "1" для параметра "parameterIndex"
+Invalid value "1" for parameter "parameterIndex" [90008-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1395)
+	at org.h2.jdbc.JdbcPreparedStatement.setLong(JdbcPreparedStatement.java:678)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalary(ProjectDevDaoService.java:141)
+	at com.goit.javacore5.feature.App.main(App.java:39)
+2022-08-17 19:29:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "1" для параметра "parameterIndex"
+Invalid value "1" for parameter "parameterIndex" [90008-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1395)
+	at org.h2.jdbc.JdbcPreparedStatement.setLong(JdbcPreparedStatement.java:678)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalary(ProjectDevDaoService.java:140)
+	at com.goit.javacore5.feature.App.main(App.java:39)
+2022-08-17 19:31:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "1" для параметра "parameterIndex"
+Invalid value "1" for parameter "parameterIndex" [90008-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1395)
+	at org.h2.jdbc.JdbcPreparedStatement.setLong(JdbcPreparedStatement.java:678)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalary(ProjectDevDaoService.java:140)
+	at com.goit.javacore5.feature.App.main(App.java:39)
+2022-08-17 22:25:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "1" для параметра "parameterIndex"
+Invalid value "1" for parameter "parameterIndex" [90008-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1395)
+	at org.h2.jdbc.JdbcPreparedStatement.setLong(JdbcPreparedStatement.java:678)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalaryFromProjectId(ProjectDevDaoService.java:138)
+	at com.goit.javacore5.feature.App.main(App.java:43)
+2022-08-18 18:28:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#1" не установлен
+Parameter "#1" is not set; SQL statement:
+INSERT INTO project_developer (project_id, developer_id) VALUES(?, ?) [90012-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:186)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:255)
+	at org.h2.command.Command.executeQuery(Command.java:190)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:128)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalaryFromProjectId(ProjectDevDaoService.java:140)
+	at com.goit.javacore5.feature.App.main(App.java:43)
+2022-08-18 18:53:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "name" не найден
+Column "name" not found [42122-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalaryFromProjectId(ProjectDevDaoService.java:152)
+	at com.goit.javacore5.feature.App.main(App.java:43)
+2022-08-18 18:54:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "name" не найден
+Column "name" not found [42122-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalaryFromProjectId(ProjectDevDaoService.java:152)
+	at com.goit.javacore5.feature.App.main(App.java:43)
+2022-08-18 18:54:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "age" не найден
+Column "age" not found [42122-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalaryFromProjectId(ProjectDevDaoService.java:153)
+	at com.goit.javacore5.feature.App.main(App.java:43)
+2022-08-18 18:55:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "age" не найден
+Column "age" not found [42122-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalaryFromProjectId(ProjectDevDaoService.java:153)
+	at com.goit.javacore5.feature.App.main(App.java:43)
+2022-08-18 19:24:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "developer_id" не найден
+Column "developer_id" not found [42122-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
+	at org.h2.jdbc.JdbcResultSet.getLong(JdbcResultSet.java:745)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalaryFromProject(ProjectDevDaoService.java:153)
+	at com.goit.javacore5.feature.App.main(App.java:43)
+2022-08-18 21:27:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "developer_id" не найден
+Column "developer_id" not found [42122-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
+	at org.h2.jdbc.JdbcResultSet.getLong(JdbcResultSet.java:745)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalaryFromProject(ProjectDevDaoService.java:153)
+	at com.goit.javacore5.feature.App.main(App.java:44)
+2022-08-18 21:29:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "developer_id" не найден
+Column "developer_id" not found [42122-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
+	at org.h2.jdbc.JdbcResultSet.getLong(JdbcResultSet.java:745)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalaryFromProject(ProjectDevDaoService.java:153)
+	at com.goit.javacore5.feature.App.main(App.java:44)
+2022-08-18 22:05:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#1" не установлен
+Parameter "#1" is not set; SQL statement:
+SELECT project_id, developer_id,  salary FROM developer LEFT JOIN project_developer ON developer.id = project_developer.developer_id WHERE project_id = ? [90012-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:186)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:255)
+	at org.h2.command.Command.executeQuery(Command.java:190)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:128)
+	at com.goit.javacore5.feature.project_developer.ProjectDevDaoService.getSalaryFromProject(ProjectDevDaoService.java:148)
+	at com.goit.javacore5.feature.App.main(App.java:44)
